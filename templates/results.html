@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+</head>
+<body>
+    <h1>Recommended Songs</h1>
+    {% if recommendations %}
+        <div class="recommendations-container">
+        {% for song in recommendations %}
+            <div class="song-card">
+                <h3>{{ song.title }}</h3>
+                <p>by {{ song.artist }}</p>
+                <img src="{{ song.image_url }}" alt="Album Art">
+                <br>
+                <a href="{{ song.spotify_link }}" target="_blank">Listen on Spotify</a>
+            </div>
+        {% endfor %}
+        </div>
+    {% else %}
+        <p>No recommendations found. Try a different song!</p>
+    {% endif %}
+    <br>
+    <a href="/" class="back-button">
+        <i class="fas fa-home icon"></i>
+        Back to Home
+    </a>
+</body>
+</html>

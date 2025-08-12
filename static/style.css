@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* White text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    text-align: center;
+}
+.container {
+    background-color: #1e1e1e;
+    padding: 40px 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h1 {
+    color: #1DB954; /* Spotify green */
+    margin-bottom: 20px;
+    font-size: 2.5em;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #ffffff;
+    font-size: 1em;
+}
+input[type="submit"] {
+    background-color: #1DB954; /* Spotify green */
+    color: #ffffff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+    background-color: #1ed760;
+}
+
+.recommendations-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+}
+.song-card {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+.song-card:hover {
+    transform: scale(1.05);
+}
+.song-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+.song-card h3 {
+    color: #ffffff;
+    font-size: 1.2em;
+    margin: 0 0 5px 0;
+}
+.song-card p {
+    color: #b3b3b3;
+    margin: 0 0 10px 0;
+}
+.song-card a {
+    background-color: #1DB954;
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.song-card a:hover {
+    background-color: #1ed760;
+}
+.back-button {
+    text-decoration: none;
+    /* Existing properties... */
+    background-color: transparent; /* Make the background transparent */
+    border: 2px solid #1DB954; /* Add a green border */
+    color: #1DB954; /* Change the text color to green */
+    /* Remove the old hover background color */
+    transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #1DB954; /* Fill the button with green on hover */
+    color: #ffffff; /* Change text to white on hover */
+    transform: scale(1.05);
+}
+
+.back-button .icon {
+    /* No change needed here */
+    margin-right: 8px;
+}
