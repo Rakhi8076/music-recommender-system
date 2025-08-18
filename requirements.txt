@@ -2,4 +2,3 @@ Flask
 gunicorn
 pandas
 scikit-learn
-...and any other libraries
