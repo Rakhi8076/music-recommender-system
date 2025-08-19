@@ -29,6 +29,11 @@ Follow these steps to set up and run the project on your local machine.
 - Python 3.x
 - Git
 
+- # The Spotifier - Music Recommender System
+
+## Live Demo
+Check out the live website here: [https://the-spotifier.onrender.com/](https://the-spotifier.onrender.com/)
+
 ### Installation
 
 ### Installation
