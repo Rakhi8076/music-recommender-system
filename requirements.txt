@@ -2,3 +2,5 @@ Flask
 gunicorn
 pandas
 scikit-learn
+numpy
+gradio
