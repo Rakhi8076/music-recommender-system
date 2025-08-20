@@ -47,7 +47,6 @@ Check out the live website here: [https://the-spotifier.onrender.com/](https://t
 2.  **Create a virtual environment** (recommended):
     ```bash
     python -m venv myenv
-    source myenv/bin/activate  # On macOS/Linux
     myenv\Scripts\activate     # On Windows
     ```
 
@@ -65,6 +64,3 @@ To run the application, set the `FLASK_APP` environment variable to point to you
 $env:FLASK_APP = "run_flask.py"
 flask run
 
-# On macOS/Linux
-export FLASK_APP=run_flask.py
-flask run
