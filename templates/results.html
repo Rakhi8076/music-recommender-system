@@ -1,32 +1,45 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Recommendations</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Spotifier - Results</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
 </head>
-<body>
-    <h1>Recommended Songs</h1>
-    {% if recommendations %}
-        <div class="recommendations-container">
-        {% for song in recommendations %}
-            <div class="song-card">
-                <h3>{{ song.title }}</h3>
-                <p>by {{ song.artist }}</p>
-                <img src="{{ song.image_url }}" alt="Album Art">
-                <br>
-                <a href="{{ song.spotify_link }}" target="_blank">Listen on Spotify</a>
+<body class="flex flex-col min-h-screen">
+    <main class="flex-grow">
+        <!-- Navbar -->
+        <header class="navbar">
+            <h1 class="logo"> The Spotifier</h1>
+        </header>
+
+        <!-- Recommended Songs Section -->
+        <section class="songs">
+            <h2>Recommended Songs</h2>
+            <div class="song-list">
+                {% if recommendations %}
+                    {% for song in recommendations %}
+                    <div class="song-card">
+                        <img src="{{ song.image_url }}" alt="{{ song.title }} album cover">
+                        <h3>{{ song.title }}</h3>
+                        <p>by {{ song.artist }}</p>
+                        <a href="{{ song.spotify_link }}" target="_blank" class="spotify-link">Listen on Spotify</a>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <div class="message-box">
+                        <p>No recommendations found for that song. Please try a different song title!</p>
+                    </div>
+                {% endif %}
             </div>
-        {% endfor %}
-        </div>
-    {% else %}
-        <p>No recommendations found. Try a different song!</p>
-    {% endif %}
-    <br>
-    <a href="/" class="back-button">
-        <i class="fas fa-home icon"></i>
-        Back to Home
-    </a>
+            <a href="/" class="back-button">Go Back</a>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer mt-auto">
+        <p>Made with 💚 by Rakhi using Machine Learning</p>
+    </footer>
 </body>
 </html>
